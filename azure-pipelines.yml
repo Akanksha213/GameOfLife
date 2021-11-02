@@ -17,6 +17,6 @@ steps:
     jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     mavenVersionOption: 'Default'
-   publishJUnitresults: true
-   testResultFiles: '**/surefire-reports/TEST-*.xml'
-   goals: package
+    publishJUnitresults: true
+    testResultFiles: '**/surefire-reports/TEST-*.xml'
+    goals: package
