@@ -17,9 +17,15 @@ steps:
     versionSpec: '11'
     #jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
+    jdkFile: "/builds/openjdk-11.0.2_linux-x64_bin.tar.gz"
+    jdkDestinationDirectory: "/builds/binaries/externals"
+    cleanDestinationDirectory: true
     mavenVersionOption: 'Default'
     publishJUnitresults: true
     #testResultFiles: '**/surefire-reports/TEST-*.xml'
     goals: package
+    
+
+
     
 
