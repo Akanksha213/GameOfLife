@@ -8,6 +8,13 @@ trigger:
 
 pool: Linux
 
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '8'
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'LocalDirectory'
+    cleanDestinationDirectory: true
+
 steps:
 - task: Maven@3
   inputs:
