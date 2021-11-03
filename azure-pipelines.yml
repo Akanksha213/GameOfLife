@@ -14,9 +14,24 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
+    versionSpec: '11'
+    #jdkVersionOption: '1.8'
     jdkArchitectureOption: 'x64'
     mavenVersionOption: 'Default'
     publishJUnitresults: true
     testResultFiles: '**/surefire-reports/TEST-*.xml'
     goals: package
+    
+
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '8' 
+    jdkArchitectureOption: 'x64'
+    #jdkSourceOption:  Options: AzureStorage, LocalDirectory
+    #jdkFile: # Required when jdkSourceOption == LocalDirectory
+    #azureResourceManagerEndpoint: # Required when jdkSourceOption == AzureStorage
+    #azureStorageAccountName: # Required when jdkSourceOption == AzureStorage
+    #azureContainerName: # Required when jdkSourceOption == AzureStorage
+    #azureCommonVirtualFile: # Required when jdkSourceOption == AzureStorage
+    jdkDestinationDirectory: 
+    #cleanDestinationDirectory: true 
